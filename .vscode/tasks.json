@@ -1,0 +1,23 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build with g++",
+      "type": "shell",
+      "command": "g++",
+      "args": [
+        "-std=c++11",             // 👈 C++11 flag
+        "-g",
+        "${file}",
+        "-o",
+        "${fileDirname}/${fileBasenameNoExtension}"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$gcc"],
+      "detail": "Compile C++ with g++ and C++11 standard"
+    }
+  ]
+}
